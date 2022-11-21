@@ -1,5 +1,6 @@
 # docker-gophernicus
 
+**Fork of [Kaiju's Docker Gophernicus](https://github.com/kaiju/docker-gophernicus) that has a few fixes and multi-arch support for ARMv6, ARMv7, ARM64, and x86_64**
 An Alpine Linux based Docker image for the [Gophernicus Gopher server](https://github.com/gophernicus/gophernicus).
 
 Do you just want to run a simple Gopher service? Do you not want to mess the hassle of setting up old-school inetd/xinetd/systemd sockets/etc? Are you already running all your other services as containers? Me too!
@@ -9,10 +10,10 @@ This image runs Gophernicus via xinetd on an Alpine Linux base for a Docker imag
 ex:
 ```
 docker run --name gophernicus \
-	--hostname <your gopher hostname> \
-	-p 70:70 \
-	-v <your gopher root>:/var/gopher \
-	joshkaiju/gophernicus
+    --hostname '<your gopher hostname>' \
+    -p 70:70 \
+    -v <your gopher root>:/var/gopher \
+    lucaspbastos/gophernicus
 ```
 
 ## Configuration

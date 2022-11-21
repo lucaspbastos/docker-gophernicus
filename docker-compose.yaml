@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  gophernicus:
+    container_name: gophernicus
+    hostname: ${HOSTNAME}
+    ports:
+      - 70:70
+    volumes:
+      - ${GOPHER_DIR}:/var/gopher
+    image: lucaspbastos/docker-gophernicus
